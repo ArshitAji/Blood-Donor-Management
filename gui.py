@@ -15,7 +15,9 @@ with tab1:
     blood_group=st.selectbox("Please select your blood group",["A+","B+","O-","AB+","A-","B-","AB-","O+"])
     phone=st.text_input("Phone Number=")
     city=st.text_input("City Name=")
-    last_donation=st.text_input("Last donation date=(yyyy/mm/dd)")
+    # last_donation=st.text_input("Last donation date=(yyyy/mm/dd)")
+    #date using selection
+    last_donation = st.date_input("Last donation date=(yyyy/mm/dd)")
     if st.button("Add New Blood Donor"):
         donor_instance.post(name=name,blood_group=blood_group,phone=phone,city=city,last_donation=last_donation)
         st.success("Blood Donor Added Successfully")
