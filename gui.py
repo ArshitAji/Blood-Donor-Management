@@ -24,3 +24,8 @@ with tab1:
 
 with tab2:
     st.title("View Blood Donor Details")
+    records=donor_instance.get()
+    if records:
+        st.table(records)
+    else:
+        st.warning("Record not found")

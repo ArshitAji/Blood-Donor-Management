@@ -45,8 +45,10 @@ class BloodDonorManagement:
             query="select * from donor"
             self.cursor.execute(query)
             record=self.cursor.fetchall()
-            for data in record:
-                print(data)
+            # this changed because in streamlit we does not have to loop to print as table
+            # for data in record:
+            #     print(data)
+            return record
         except Exception as e:
             print(e)
     def retrieve(self,id=None):
